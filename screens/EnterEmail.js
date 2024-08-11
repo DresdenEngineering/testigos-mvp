@@ -3,23 +3,20 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Button from '../components/Button';
 
-const EnterName = () => {
+const EnterEmail = () => {
   const navigation = useNavigation();
-  const [name, setName] = useState('');
-  const navigateToEnterEmail = () => {
-    navigation.navigate('EnterEmail');
-  };
+  const [email, setEmail] = useState('');
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>¿Cómo te llamas?</Text>
+      <Text style={styles.text}>Cuál es tu correo electrónico?</Text>
       <TextInput
         style={styles.input}
-        placeholder="Escribe tu nombre"
-        value={name}
-        onChangeText={setName}
+        placeholder="Escribe tu correo electrónico"
+        value={email}
+        onChangeText={setEmail}
       />
-      <Button theme="primary" label="Continuar" onPress={navigateToEnterEmail}/>
+      <Button theme="primary" label="Continuar" />
     </View>
   );
 };
@@ -51,4 +48,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default EnterName;
+export default EnterEmail;

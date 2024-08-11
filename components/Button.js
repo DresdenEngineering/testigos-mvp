@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: 320,
     height: 68,
-    marginHorizontal: 20,
+    // marginHorizontal: 20,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 0,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#343a40',
     width: '100%',
     height: '100%',
-    borderWidth: 0,
+    // borderWidth: 0,
   },
   secondaryButton: {
     alignItems: 'center',

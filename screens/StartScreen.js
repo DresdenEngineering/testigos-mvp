@@ -10,32 +10,39 @@ const handlePress = (callback) => {
   callback();
 };
 
-const HomeScreen = ({ navigation }) => {
+const StartScreen = ({ navigation }) => {
+  const navigateToEnterName = () => {
+    navigation.navigate('EnterName');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Image source={LogoImage} style={styles.logoImage} />        
       </View>
       <View style={styles.footerContainer}>
-      <Button theme="primary" label="Empezar" onPress={createDID} />
+      <Button theme="primary" label="Empezar" onPress={navigateToEnterName} />
+      {/* <Button theme="primary" label="Empezar" onPress={createDID} /> */}
       <Button theme="secondary" label="Iniciar Sesión" />
       </View>
       <StatusBar style="auto" />
     </View>
+
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#FCE279',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   logoContainer: {
-    // backgroundColor: 'lightgrey',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // width: '50%', // Ensure the container takes the full width of the parent
+    // width: '50%', // TODO: Ensure the container takes the full width of the parent
   },
   footerContainer: {
     flex: 1 / 3,
@@ -49,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default StartScreen;
