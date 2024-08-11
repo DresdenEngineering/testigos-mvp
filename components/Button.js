@@ -1,31 +1,51 @@
 import { StyleSheet, View, Text, Pressable, Alert } from 'react-native';
 
-export default function Button({ label, theme, navigation }) {
-  const handlePress = () => {
-    Alert.alert('Button Pressed', 'You pressed the button!')
+const Button = ({ theme, label, onPress }) => {
+  const handlePress = (callback) => {
+    if (typeof callback === 'function') {
+      callback();
+    }
   };
 
-  if (theme === "primary") {
-    return (
-      <View style={[styles.buttonContainer, { borderRadius: 18 }]}>
-        <Pressable
-          style={styles.primaryButton}
-          onPress={handlePress}
-        >
-          <Text style={[styles.text, { color: "#fff" }]}>{label}</Text>
-        </Pressable>
-      </View>
-    );
-  }
-
   return (
-    <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={handlePress}>
-        <Text style={styles.buttonLabel}>{label}</Text>
+    <View style={[styles.buttonContainer, { borderRadius: 18 }]}>
+      <Pressable
+        style={styles.primaryButton}
+        onPress={() => handlePress(onPress)}
+      >
+        <Text style={[styles.text, { color: "#fff" }]}>{label}</Text>
       </Pressable>
     </View>
   );
-}
+};
+
+// export default function Button({ label, theme, navigation }) {
+
+  // const handlePress = (callback) => {
+  //   callback();
+  // };
+
+  // if (theme === "primary") {
+  //   return (
+  //     <View style={[styles.buttonContainer, { borderRadius: 18 }]}>
+  //       <Pressable
+  //         style={styles.primaryButton}
+  //         onPress={() => handlePress(onPress)}
+  //         >
+  //         <Text style={[styles.text, { color: "#fff" }]}>{label}</Text>
+  //       </Pressable>
+  //     </View>
+  //   );
+  // }
+
+  // return (
+  //   <View style={styles.buttonContainer}>
+  //     <Pressable style={styles.button} onPress={handlePress}>
+  //       <Text style={styles.buttonLabel}>{label}</Text>
+  //     </Pressable>
+  //   </View>
+  // );
+// }
 
 const styles = StyleSheet.create({
   buttonContainer: {
@@ -35,6 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 0,
+    backgroundColor: '#fff',
   },
   button: {
     alignItems: 'center',
@@ -59,3 +80,5 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
 });
+
+export default Button;
