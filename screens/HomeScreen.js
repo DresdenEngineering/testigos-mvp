@@ -12,20 +12,17 @@ const handlePress = (callback) => {
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <Button theme="primary" label="Empezar" onPress={createDID} />
+    <View style={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image source={LogoImage} style={styles.logoImage} />        
+      </View>
+      <View style={styles.footerContainer}>
+      <Button theme="primary" label="Empezar" onPress={createDID} />
+      <Button theme="secondary" label="Iniciar Sesión" />
+      </View>
+      <StatusBar style="auto" />
+    </View>
   );
-  // return (
-  //   <View style={styles.container}>
-  //     <View style={styles.logoContainer}>
-  //       <Image source={LogoImage} style={styles.logoImage} />        
-  //     </View>
-  //     <View style={styles.footerContainer}>
-  //       <Button theme="primary" label="Empezar" onPress={createDID} />
-  //       <Button label="Iniciar Sesión" />
-  //     </View>
-  //     <StatusBar style="auto" />
-  //   </View>
-  // );
 };
 
 const styles = StyleSheet.create({
