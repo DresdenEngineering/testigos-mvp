@@ -1,24 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ProfileView from './views/ProfileView';
 
 const Tab = createBottomTabNavigator();
 
 const ProfileScreen = () => (
   <View style={styles.container}>
-    <Text style={styles.dummyText}>Perfil</Text>
+    {/* <Text style={styles.dummyText}>Perfil</Text> */}
+    <ProfileView />
   </View>
 );
 
 const CredentialsScreen = () => (
   <View style={styles.container}>
-    <Text style={styles.dummyText}>Credenciales</Text>
+    <Text style={styles.dummyText}>Llaves</Text>
   </View>
 );
 
 const RewardsScreen = () => (
   <View style={styles.container}>
-    <Text style={styles.dummyText}>Recompensas</Text>
+    <Text style={styles.dummyText}>Billetera</Text>
   </View>
 );
 
@@ -40,8 +42,8 @@ const HomeScreen = () => {
       }}
     >
       <Tab.Screen name="Perfil" component={ProfileScreen} style={styles.menuItem} />
-      <Tab.Screen name="Credenciales" component={CredentialsScreen} />
-      <Tab.Screen name="Recompensas" component={RewardsScreen} />
+      <Tab.Screen name="Llaves" component={CredentialsScreen} />
+      <Tab.Screen name="Billetera" component={RewardsScreen} />
       <Tab.Screen name="Cámara" component={CameraScreen} />
     </Tab.Navigator>
   );
