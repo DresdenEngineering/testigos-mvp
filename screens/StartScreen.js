@@ -1,6 +1,8 @@
 import React from 'react';
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, Pressable, Text } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+
 import Button from '../components/Button';
 import createDID from '../components/CreateDID';
 
@@ -21,9 +23,12 @@ const StartScreen = ({ navigation }) => {
         <Image source={LogoImage} style={styles.logoImage} />        
       </View>
       <View style={styles.footerContainer}>
-      <Button theme="primary" label="Empezar" onPress={navigateToEnterName} />
-      {/* <Button theme="primary" label="Empezar" onPress={createDID} /> */}
-      <Button theme="secondary" label="Iniciar Sesión" />
+        <Pressable style={[styles.fullWidthButton, styles.primaryButton]} onPress={navigateToEnterName}>
+          <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Empezar</Text>
+        </Pressable>
+        <Pressable style={[styles.fullWidthButton, styles.secondaryButton]} onPress={navigateToEnterName}>
+          <Text style={[styles.fullWidthButtonText, styles.secondaryButtonText]}>Iniciar Sesión</Text>
+        </Pressable>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -49,11 +54,41 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logoImage: {
-    // maxWidth: 100, // Constrain the maximum width of the image
-    // maxHeight: 150, // Constrain the maximum height of the image
-    // borderWidth: 2, // Add border width
-    // borderColor: 'black', // Add border color
+    width: 200, // Set the width of the image
+    height: 200, // Set the height of the image
+    resizeMode: 'contain',
   },
+
+  fullWidthButton: {
+    width: 270,
+    borderRadius: 20,
+  },
+
+  fullWidthButtonText: {
+    width: 270,
+    fontSize: 17,
+    letterSpacing: 1.5,
+    borderRadius: 20,
+    textAlign: 'center',
+    paddingVertical: 16,
+    fontFamily: 'Roboto_700Bold',
+    textTransform: 'uppercase',
+  },
+  primaryButton: {
+    backgroundColor: '#424242',
+  },
+  primaryButtonText: {
+    color: '#F9F9F9',
+    fontFamily: 'Roboto_700Bold',
+  },
+  secondaryButton: {
+    marginTop: 30,
+    borderColor: '#424242',
+    borderWidth: 2,
+  },
+  secondaryButtonText: {
+    color: '#424242',
+  }
 });
 
 export default StartScreen;

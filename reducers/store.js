@@ -6,7 +6,7 @@ const initialState = {
   profilePictureUrl: '',
   profileCompleteness: 0.75,
   name: 'Pedro Pérez',
-  bio: 'Software Engineer at Example Corp. Loves coding, coffee, and cats.',
+  bio: 'Loves coding, coffee, and cats.',
 };
 
 // Action types

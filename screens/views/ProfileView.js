@@ -1,138 +1,126 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
 import SvgQRCode from 'react-native-qrcode-svg';
-import { connect } from 'react-redux';
-import * as Progress from 'react-native-progress';
 
-const ProfileView = ({ userId, profilePictureUrl, profileCompleteness, name, bio }) => {
+
+const ProfileView = () => {
+    // const userId = 'user-unique-identifier';
+
+
   return (
-    <View style={styles.container}>
-      <Image
-        source={
-          profilePictureUrl
-            ? { uri: profilePictureUrl }
-            : require('../../assets/images/logo.png')
-        }
-        style={styles.profileImage}
-      />
-      <Text style={styles.name}>{name}</Text>
-      <Text style={styles.bio}>{bio}</Text>
-      <View style={styles.progressBarContainer}>
-        <Text style={styles.progressText}>Profile Completeness</Text>
-        <Progress.Bar
-          progress={profileCompleteness}
-          width={200}
-          color="#3b5998"
-          unfilledColor="#e0e0e0"
-          borderWidth={0}
-          borderRadius={5}
-        />
+    <ScrollView contentContainerStyle={styles.scrollViewContent}>
+
+      <View style={styles.container}>
+          <Text style={styles.name}> Hola, Pedro</Text>
+          {/* <View style={styles.qrCodeContainer}>
+              <SvgQRCode value={userId} size={150} />
+          </View> */}
+          <Image
+              // source={{ uri: 'https://example.com/profile-picture.jpg' }} // Replace with actual profile picture URL
+              source={{ uri: '../assets/images/logo.png' }} // Replace with actual profile picture URL            
+              style={styles.profileImage}
+          />
+
+          <View style={styles.profileStrengthContainer}>
+            <Text style={styles.profileStrength}>Fortaleza de Perfil</Text>
+            <View style={styles.progressBarContainer}>
+              <View style={styles.progressBarFill} />
+            </View>
+          </View>
+
+          <View style={styles.profileStepsContainer}>
+            <Pressable style={styles.pressable}>
+              <Text style={styles.pressableText}>Datos personales</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
+            <Pressable style={styles.pressable}>
+              <Text style={styles.pressableText}>Verificar identidad</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
+            <Pressable style={styles.pressable}>
+              <Text style={styles.pressableText}>Frase de recuperación</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
+            <Pressable style={styles.pressable}>
+              <Text style={styles.pressableText}>Guardianes</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
+          </View>
       </View>
-      <View style={styles.qrCodeContainer}>
-        <SvgQRCode value={userId} size={150} />
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'top',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFF'
   },
   profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 200,
+    height: 200,
+    backgroundColor: '#c1c1c1',
+    borderRadius: 200,
     marginBottom: 20,
   },
   name: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginTop: 50,
+    marginBottom: 50,
   },
   bio: {
     fontSize: 16,
     textAlign: 'center',
     color: '#666',
   },
+  profileStrengthContainer: {
+    marginTop: 20
+  },
+  profileStrength: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginBottom: 15,
+    fontWeight: '500',
+  },
   progressBarContainer: {
+    width: 310,
+    height: 15,
+    backgroundColor: '#e0e0e0',
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
+  progressBarFill: {
+    width: '10%', // Fill 10% of the bar
+    height: '100%',
+    backgroundColor: '#76c7c0',
+  },
+
+  profileStepsContainer: {
     marginTop: 20,
+    width: 310,
     alignItems: 'center',
   },
-  progressText: {
+  pressable: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    padding: 20,
+    marginVertical: 5,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 10,
+  },
+  pressableText: {
     fontSize: 16,
-    marginBottom: 10,
   },
-  qrCodeContainer: {
-    marginTop: 20,
+  arrowIcon: {
+    marginLeft: 10,
   },
 });
 
-// Map state to props
-const mapStateToProps = (state) => ({
-  userId: state.userId,
-  profilePictureUrl: state.profilePictureUrl,
-  profileCompleteness: state.profileCompleteness,
-  name: state.name,
-  bio: state.bio,
-});
-
-export default connect(mapStateToProps)(ProfileView);
-
-// import React from 'react';
-// import { View, Text, Image, StyleSheet } from 'react-native';
-// import SvgQRCode from 'react-native-qrcode-svg';
-
-
-// const ProfileView = () => {
-//     const userId = 'user-unique-identifier'; // Replace with the actual user ID or any unique identifier
-
-
-//   return (
-//     <View style={styles.container}>
-//         {/* <View style={styles.qrCodeContainer}>
-//             <SvgQRCode value={userId} size={150} />
-//         </View> */}
-//         <Image
-//             // source={{ uri: 'https://example.com/profile-picture.jpg' }} // Replace with actual profile picture URL
-//             source={{ uri: '../assets/images/logo.png' }} // Replace with actual profile picture URL            
-//             style={styles.profileImage}
-//         />
-//       <Text style={styles.name}>Pedro Pérez</Text>
-//       <Text style={styles.bio}>Software Engineer at Example Corp. Loves coding, coffee, and cats.</Text>
-
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     padding: 20,
-//     backgroundColor: '#fff',
-//   },
-//   profileImage: {
-//     width: 100,
-//     height: 100,
-//     borderRadius: 50,
-//     marginBottom: 20,
-//   },
-//   name: {
-//     fontSize: 24,
-//     fontWeight: 'bold',
-//     marginBottom: 10,
-//   },
-//   bio: {
-//     fontSize: 16,
-//     textAlign: 'center',
-//     color: '#666',
-//   },
-// });
-
-// export default ProfileView;
+export default ProfileView;

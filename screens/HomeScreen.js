@@ -20,7 +20,7 @@ const CredentialsScreen = () => (
 
 const RewardsScreen = () => (
   <View style={styles.container}>
-    <Text style={styles.dummyText}>Billetera</Text>
+    <Text style={styles.dummyText}>Billtera</Text>
   </View>
 );
 
@@ -41,7 +41,7 @@ const HomeScreen = () => {
         headerShown: false,
       }}
     >
-      <Tab.Screen name="Perfil" component={ProfileScreen} style={styles.menuItem} />
+      <Tab.Screen name="Perfil" component={ProfileScreen} />
       <Tab.Screen name="Llaves" component={CredentialsScreen} />
       <Tab.Screen name="Billetera" component={RewardsScreen} />
       <Tab.Screen name="Cámara" component={CameraScreen} />
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FCE279',
+    backgroundColor: '#FFF',
 
   },
   menuItem: {
