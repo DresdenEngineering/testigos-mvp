@@ -27,9 +27,9 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarStyle: { backgroundColor: '#000' }, // Dark background for tab bar
-        tabBarActiveTintColor: '#fff', // White color for active tab icon and label
-        tabBarInactiveTintColor: '#888', // Grey color for inactive tab icon and label
+        tabBarStyle: { backgroundColor: '#FBE27C' },
+        tabBarActiveTintColor: '#fff',
+        tabBarInactiveTintColor: '#888',
       }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
