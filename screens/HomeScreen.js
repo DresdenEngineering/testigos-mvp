@@ -1,22 +1,27 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import styles from './styles';
 
+
+// Views
 import ProfileView from './views/ProfileView';
+import RolesView from './views/RolesView';
+
 
 const Tab = createBottomTabNavigator();
 
 const ProfileScreen = () => (
   <View style={styles.container}>
-    {/* <Text style={styles.dummyText}>Perfil</Text> */}
     <ProfileView />
   </View>
 );
 
-const CredentialsScreen = () => (
+const RolesScreen = () => (
   <View style={styles.container}>
-    <Text style={styles.dummyText}>Llaves</Text>
+    <RolesView />
+    {/* <Text style={styles.dummyText}>Roles</Text> */}
   </View>
 );
 
@@ -46,15 +51,15 @@ const HomeScreen = () => {
             borderTopRightRadius: 30 
           },
           tabBarActiveTintColor: '#272727',
-          tabBarInactiveTintColor: 'gray',
+          tabBarInactiveTintColor: 'rgba(89, 89, 89, .8)',
           tabBarItemStyle: { paddingVertical: 15 },
           headerShown: false,
           tabBarIcon: ({ color, size }) => {
             let iconName;
             if (route.name === 'Perfil') {
               iconName = 'person';
-            } else if (route.name === 'Llaves') {
-              iconName = 'vpn-key';
+            } else if (route.name === 'Roles') {
+              iconName = 'group';
             } else if (route.name === 'Billetera') {
               iconName = 'account-balance-wallet';
             } else if (route.name === 'Cámara') {
@@ -65,28 +70,12 @@ const HomeScreen = () => {
         })}
       >
         <Tab.Screen name="Perfil" component={ProfileScreen} />
-        <Tab.Screen name="Llaves" component={CredentialsScreen} />
+        <Tab.Screen name="Roles" component={RolesScreen} />
         <Tab.Screen name="Billetera" component={RewardsScreen} />
         <Tab.Screen name="Cámara" component={CameraScreen} />
       </Tab.Navigator>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  screenContainer: {
-    flex: 1,
-    backgroundColor: '#FFF', // Set the background color behind the tab bar
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFF',
-  },
-  dummyText: {
-    fontSize: 22,
-  },
-});
 
 export default HomeScreen;

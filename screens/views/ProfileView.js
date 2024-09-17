@@ -2,16 +2,16 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, Pressable, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
 import SvgQRCode from 'react-native-qrcode-svg';
+import styles from '../styles';
 
 
 const ProfileView = () => {
     // const userId = 'user-unique-identifier';
 
-
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContent}>
 
-      <View style={styles.container}>
+      <View style={styles.container_white}>
           <Text style={styles.name}> Hola, Pedro</Text>
           {/* <View style={styles.qrCodeContainer}>
               <SvgQRCode value={userId} size={150} />
@@ -51,76 +51,5 @@ const ProfileView = () => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'top',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#FFF'
-  },
-  profileImage: {
-    width: 200,
-    height: 200,
-    backgroundColor: '#c1c1c1',
-    borderRadius: 200,
-    marginBottom: 20,
-  },
-  name: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginTop: 50,
-    marginBottom: 50,
-  },
-  bio: {
-    fontSize: 16,
-    textAlign: 'center',
-    color: '#666',
-  },
-  profileStrengthContainer: {
-    marginTop: 20
-  },
-  profileStrength: {
-    fontSize: 18,
-    textAlign: 'center',
-    marginBottom: 15,
-    fontWeight: '500',
-  },
-  progressBarContainer: {
-    width: 310,
-    height: 15,
-    backgroundColor: '#e0e0e0',
-    borderRadius: 10,
-    overflow: 'hidden',
-  },
-  progressBarFill: {
-    width: '10%', // Fill 10% of the bar
-    height: '100%',
-    backgroundColor: '#76c7c0',
-  },
-
-  profileStepsContainer: {
-    marginTop: 20,
-    width: 310,
-    alignItems: 'center',
-  },
-  pressable: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
-    padding: 20,
-    marginVertical: 5,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 10,
-  },
-  pressableText: {
-    fontSize: 16,
-  },
-  arrowIcon: {
-    marginLeft: 10,
-  },
-});
 
 export default ProfileView;
