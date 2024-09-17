@@ -194,6 +194,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 3,
     width: 310,
+    marginTop: 15
   },
 
   cardContent: {
@@ -212,36 +213,20 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
 
+  flatlist_container: {
+    flex: 1,
+    justifyContent: "top",
+    alignItems: "center",
+    paddingVertical: 40
+  },
 
-  // Others
-  //   button: {
-  //     backgroundColor: "#007BFF",
-  //     paddingVertical: 8,
-  //     paddingHorizontal: 16,
-  //     borderRadius: 4,
-  //     marginTop: 8,
-  //   },
+  seeRolesButton: {
+    backgroundColor: '#FCE279',
+    padding: 8,
+    borderRadius: 4,
+    alignSelf: 'flex-end', // Align the button to the right
 
-  //   buttonText: {
-  //     color: "#FFF",
-  //     fontSize: 14,
-  //     fontWeight: "bold",
-  //   },
-
-  //   bio: {
-  //     fontSize: 16,
-  //     textAlign: "center",
-  //     color: "#666",
-  //   },
-
-  //   buttonContainer: {
-  //     flex: 1 / 3,
-  //     alignItems: "center",
-  //   },
-
-  //   containerView: {
-  //     backgroundColor: "#FFF",
-  //   },
+  }
 });
 
 export default styles;
