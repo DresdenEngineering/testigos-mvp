@@ -189,10 +189,8 @@ const styles = StyleSheet.create({
     padding: 16,
     marginVertical: 8,
     borderRadius: 8,
-    shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 3,
+    borderColor: '#c1c1c1',
+    borderWidth: 1,
     width: 310,
     marginTop: 15
   },
