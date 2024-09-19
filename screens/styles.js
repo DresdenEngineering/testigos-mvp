@@ -239,7 +239,6 @@ const styles = StyleSheet.create({
 
   section: {
     marginTop: 20,
-    // width: '100%',
   },
   
   sectionTitle: {
@@ -256,7 +255,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginBottom: 16,
     paddingHorizontal: 15,
-    // width: '100%',
   },
 });
 
