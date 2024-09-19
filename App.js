@@ -11,7 +11,7 @@ import { StatusBar } from 'react-native';
 // Redux
 import { Provider } from 'react-redux';
 // import store from './store';
-import ProfileView from './screens/views/ProfileView';
+// import ProfileView from './screens/views/ProfileView';
 
 // Screens
 import StartScreen from './screens/StartScreen';
@@ -19,6 +19,7 @@ import EnterName from './screens/EnterName';
 import HomeScreen from './screens/HomeScreen';
 // import SettingsScreen from './screens/SettingsScreen';
 // import ProfileScreen from './screens/ProfileScreen';
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -33,8 +34,6 @@ const TabNavigator = () => {
       }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
-      {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
-      {/* <Tab.Screen name="Profile" component={ProfileScreen} /> */}
     </Tab.Navigator>
   );
 };

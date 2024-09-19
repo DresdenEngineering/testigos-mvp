@@ -6,7 +6,9 @@ import styles from './styles';
 
 
 // Views
-import ProfileView from './views/ProfileView';
+import ProfileStack from './views/ProfileStack';
+
+import ProfileView from './views/profile/ProfileView';
 import RolesView from './views/RolesView';
 
 
@@ -21,21 +23,9 @@ const ProfileScreen = () => (
 const RolesScreen = () => (
   <View style={styles.container}>
     <RolesView />
-    {/* <Text style={styles.dummyText}>Roles</Text> */}
   </View>
 );
 
-const RewardsScreen = () => (
-  <View style={styles.container}>
-    <Text style={styles.dummyText}>Billetera</Text>
-  </View>
-);
-
-const CameraScreen = () => (
-  <View style={styles.container}>
-    <Text style={styles.dummyText}>Cámara</Text>
-  </View>
-);
 
 const HomeScreen = () => {
   return (
@@ -60,19 +50,14 @@ const HomeScreen = () => {
               iconName = 'person';
             } else if (route.name === 'Roles') {
               iconName = 'group';
-            } else if (route.name === 'Billetera') {
-              iconName = 'account-balance-wallet';
-            } else if (route.name === 'Cámara') {
-              iconName = 'camera-alt';
-            }
+            } 
             return <Icon name={iconName} size={size} color={color} />;
           },
         })}
       >
-        <Tab.Screen name="Perfil" component={ProfileScreen} />
+        {/* <Tab.Screen name="Perfil" component={ProfileScreen} /> */}
+        <Tab.Screen name="Perfil" component={ProfileStack} />
         <Tab.Screen name="Roles" component={RolesScreen} />
-        <Tab.Screen name="Billetera" component={RewardsScreen} />
-        <Tab.Screen name="Cámara" component={CameraScreen} />
       </Tab.Navigator>
     </View>
   );

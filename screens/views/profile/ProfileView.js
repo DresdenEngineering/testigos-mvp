@@ -1,23 +1,20 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Pressable, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
-import SvgQRCode from 'react-native-qrcode-svg';
-import styles from '../styles';
+import { useNavigation } from '@react-navigation/native';
+
+import styles from '../../styles';
 
 
 const ProfileView = () => {
-    // const userId = 'user-unique-identifier';
+  const navigation = useNavigation();
 
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContent}>
 
       <View style={styles.container_white}>
           <Text style={styles.name}> Hola, Pedro</Text>
-          {/* <View style={styles.qrCodeContainer}>
-              <SvgQRCode value={userId} size={150} />
-          </View> */}
           <Image
-              // source={{ uri: 'https://example.com/profile-picture.jpg' }} // Replace with actual profile picture URL
               source={{ uri: '../assets/images/logo.png' }} // Replace with actual profile picture URL            
               style={styles.profileImage}
           />
@@ -30,7 +27,10 @@ const ProfileView = () => {
           </View>
 
           <View style={styles.profileStepsContainer}>
-            <Pressable style={styles.pressable}>
+            <Pressable 
+              style={styles.pressable}
+              onPress={() => navigation.navigate('PersonalData')}
+            >
               <Text style={styles.pressableText}>Datos personales</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
