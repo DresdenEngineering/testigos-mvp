@@ -17,14 +17,17 @@ const EnterName = () => {
 
   return (
     <View style={styles.container_yellow}>
-      <Text style={styles.text}>¿Cómo te llamas?</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Escribe tu nombre"
-        value={name}
-        onChangeText={setName}
-      />
 
+      <View style={styles.screen_container}>
+        <Text style={styles.text}>¿Cómo te llamas?</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Escribe tu nombre"
+          value={name}
+          onChangeText={setName}
+        />
+      </View>
+      
       <View style={styles.buttonContainer}>
         <Pressable style={[styles.fullWidthButton, styles.primaryButton]} onPress={navigateToHomeScreen}>
             <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Continuar</Text>

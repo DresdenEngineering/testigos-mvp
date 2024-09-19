@@ -17,13 +17,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF",
   },
 
+  screen_container: {
+    width: '100%',
+    maxWidth: 310,
+  },
+
   fullWidthButton: {
-    width: 270,
+    width: '100%',
     borderRadius: 20,
   },
 
   fullWidthButtonText: {
-    width: 270,
+    width: 310,
     fontSize: 17,
     letterSpacing: 1.5,
     borderRadius: 20,
@@ -86,13 +91,14 @@ const styles = StyleSheet.create({
     borderColor: "gray",
     marginTop: 20,
     paddingHorizontal: 10,
-    width: 270,
+    width: "100%",
     marginBottom: 20,
     backgroundColor: "white",
     borderRadius: 10,
   },
 
   buttonContainer: {
+    maxWidth: 310,
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -223,8 +229,35 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 4,
     alignSelf: 'flex-end', // Align the button to the right
+  },
 
-  }
+  // Profile Stack
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+
+  section: {
+    marginTop: 20,
+    // width: '100%',
+  },
+  
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 15,
+  },
+  
+  input_profile: {
+    height: 40,
+    fontSize: 15,
+    borderColor: '#CCC',
+    borderWidth: 1,
+    borderRadius: 15,
+    marginBottom: 16,
+    paddingHorizontal: 15,
+    // width: '100%',
+  },
 });
 
 export default styles;

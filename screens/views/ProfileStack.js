@@ -16,7 +16,7 @@ const ProfileStack = () => {
       <Stack.Screen 
         name="PersonalData" 
         component={PersonalData} 
-        options={{ headerShown: true, title: 'Personal Data' }}
+        options={{ headerShown: true, title: 'Datos Personales' }}
       />
     </Stack.Navigator>
   );
