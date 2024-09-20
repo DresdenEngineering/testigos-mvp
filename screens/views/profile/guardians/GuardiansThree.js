@@ -2,15 +2,15 @@ import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const StepTwo = () => {
+const GuardiansThree = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Step Two: Confirm Seed Phrase</Text>
+      <Text style={styles.title}>Step Three: Complete</Text>
       <Button
-        title="Next"
-        onPress={() => navigation.navigate('StepThree')}
+        title="Finish"
+        onPress={() => navigation.navigate('GuardiansOne')}
       />
     </View>
   );
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default StepTwo;
+export default GuardiansThree;

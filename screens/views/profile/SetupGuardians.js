@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import StepOne from './guardians/StepOne';
-import StepTwo from './guardians/StepTwo';
-import StepThree from './guardians/StepThree';
+import GuardiansOne from './guardians/GuardiansOne';
+import GuardiansTwo from './guardians/GuardiansTwo';
+import GuardiansThree from './guardians/GuardiansThree';
 
 
 const Stack = createStackNavigator();
@@ -11,21 +11,21 @@ const Stack = createStackNavigator();
 const SetupGuardians = () => {
   return (
     <NavigationContainer independent={true}>
-      <Stack.Navigator initialRouteName="StepOne">
+      <Stack.Navigator initialRouteName="GuardiansOne">
         <Stack.Screen 
-          name="StepOne" 
-          component={StepOne} 
-          options={{ headerShown: false, title: 'Step One' }}
+          name="GuardiansOne" 
+          component={GuardiansOne} 
+          options={{ headerShown: false }}
         />
         <Stack.Screen 
-          name="StepTwo" 
-          component={StepTwo} 
-          options={{ headerShown: false, title: 'Step Two' }}
+          name="GuardiansTwo" 
+          component={GuardiansTwo} 
+          options={{ headerShown: false }}
         />
         <Stack.Screen 
-          name="StepThree" 
-          component={StepThree} 
-          options={{ headerShown: false, title: 'Step Three' }}
+          name="GuardiansThree" 
+          component={GuardiansThree} 
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

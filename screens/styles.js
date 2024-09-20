@@ -285,7 +285,27 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 25,
     marginBottom: 50,
-  }
+  },
+
+  searchBar: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginBottom: 20,
+    width: '100%',
+  },
+
+  contactsListContainer: {
+    width: '100%',
+  },
+
+  contactItem: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
 
 });
 

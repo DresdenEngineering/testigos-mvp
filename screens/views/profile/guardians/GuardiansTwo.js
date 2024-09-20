@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from '../../../styles';
 
 
-const StepTwo = () => {
+const GuardiansTwo = () => {
   const [contacts, setContacts] = useState([]);
   const [search, setSearch] = useState('');
   const [filteredContacts, setFilteredContacts] = useState([]);
@@ -34,14 +34,15 @@ const StepTwo = () => {
 
   return (
     <View style={styles.container_white}>
-      <Text style={styles.title}>Step Two: Confirm Seed Phrase</Text>
+      {/* <Text style={styles.title}>Elige guardianes en tus contactos</Text> */}
       <TextInput
         style={styles.searchBar}
-        placeholder="Search Contacts"
+        placeholder="Buscar contactos"
         value={search}
         onChangeText={setSearch}
       />
       <FlatList
+        style={styles.contactsListContainer} // Add style to FlatList
         data={filteredContacts}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
@@ -51,58 +52,12 @@ const StepTwo = () => {
         )}
       />
       <View style={styles.buttonContainer}>
-        <Pressable style={[styles.fullWidthButton, styles.primaryButton]} onPress={() => navigation.navigate('StepThree')}>
-          <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Next</Text>
+        <Pressable style={[styles.fullWidthButton, styles.primaryButton]} onPress={() => navigation.navigate('GuardiansThree')}>
+          <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Continuar</Text>
         </Pressable>
       </View>
     </View>
   );
 };
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     padding: 20,
-//   },
-//   title: {
-//     fontSize: 24,
-//     marginBottom: 20,
-//     textAlign: 'center',
-//   },
-//   searchBar: {
-//     height: 40,
-//     borderColor: 'gray',
-//     borderWidth: 1,
-//     borderRadius: 5,
-//     paddingHorizontal: 10,
-//     marginBottom: 20,
-//   },
-//   contactItem: {
-//     padding: 10,
-//     borderBottomWidth: 1,
-//     borderBottomColor: '#ccc',
-//   },
-//   buttonContainer: {
-//     flex: 1,
-//     justifyContent: 'flex-end',
-//     width: '100%',
-//   },
-//   fullWidthButton: {
-//     padding: 15,
-//     backgroundColor: '#007bff',
-//     borderRadius: 5,
-//     alignItems: 'center',
-//   },
-//   primaryButton: {
-//     backgroundColor: '#007bff',
-//   },
-//   fullWidthButtonText: {
-//     color: '#fff',
-//     fontSize: 16,
-//   },
-//   primaryButtonText: {
-//     color: '#fff',
-//   },
-// });
-
-export default StepTwo;
+export default GuardiansTwo;
