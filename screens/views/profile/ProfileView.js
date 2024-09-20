@@ -34,15 +34,24 @@ const ProfileView = () => {
               <Text style={styles.pressableText}>Datos personales</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
-            <Pressable style={styles.pressable}>
+            <Pressable 
+              style={styles.pressable}
+              // onPress={() => navigation.navigate('ConfirmId')}
+            >
               <Text style={styles.pressableText}>Verificar identidad</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
-            <Pressable style={styles.pressable}>
+            {/* <Pressable 
+              style={styles.pressable}
+              onPress={() => navigation.navigate('CreateSeed')}
+            >
               <Text style={styles.pressableText}>Frase de recuperación</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
-            </Pressable>
-            <Pressable style={styles.pressable}>
+            </Pressable> */}
+            <Pressable 
+              style={styles.pressable}
+              onPress={() => navigation.navigate('SetupGuardians')}  
+            >
               <Text style={styles.pressableText}>Guardianes</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>

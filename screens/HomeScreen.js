@@ -55,7 +55,6 @@ const HomeScreen = () => {
           },
         })}
       >
-        {/* <Tab.Screen name="Perfil" component={ProfileScreen} /> */}
         <Tab.Screen name="Perfil" component={ProfileStack} />
         <Tab.Screen name="Roles" component={RolesScreen} />
       </Tab.Navigator>

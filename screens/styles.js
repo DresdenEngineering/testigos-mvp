@@ -256,6 +256,37 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     paddingHorizontal: 15,
   },
+
+
+  // Guardians
+  guardiansIconContainer: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    backgroundColor: 'grey',
+    marginBottom: 20,
+  },
+
+  instructions_title: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 40,
+  },
+
+  instructions_text: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginTop: 15,
+    fontWeight: '500',
+  },
+
+  instructions_subtext: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginTop: 25,
+    marginBottom: 50,
+  }
+
 });
 
 export default styles;
