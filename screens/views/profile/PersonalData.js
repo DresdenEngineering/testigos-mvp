@@ -26,20 +26,20 @@ const PersonalData = ({ navigation }) => {
           </View>
 
           {/* Section 3: Documento */}
-          <View style={styles.section}>
+          {/* <View style={styles.section}>
             <Text style={styles.sectionTitle}>Documento</Text>
             <TextInput style={styles.input_profile} placeholder="Tipo de documento" />
             <TextInput style={styles.input_profile} placeholder="Número de documento" />
             <TextInput style={styles.input_profile} placeholder="Fecha de expedición" />
             <TextInput style={styles.input_profile} placeholder="Fecha de expiración" />
-          </View>
+          </View> */}
 
           {/* Section 4: Contacto */}
-          <View style={styles.section}>
+          {/* <View style={styles.section}>
             <Text style={styles.sectionTitle}>Contacto</Text>
             <TextInput style={styles.input_profile} placeholder="Email" keyboardType="email-address" />
             <TextInput style={styles.input_profile} placeholder="Teléfono" keyboardType="phone-pad" />
-          </View>
+          </View> */}
 
           {/* Section 5: Dirección */}
           <View style={styles.section}>

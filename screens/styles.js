@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginTop: 50,
-    marginBottom: 50,
+    marginBottom: 40,
   },
 
   profileImage: {
@@ -184,6 +184,17 @@ const styles = StyleSheet.create({
 
   pressableText: {
     fontSize: 16,
+  },
+
+  headerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+  },
+
+  logoutButton: {
+    padding: 10,
   },
 
   // RolesView
@@ -306,6 +317,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },
+
+
 
 });
 

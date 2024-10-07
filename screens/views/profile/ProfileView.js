@@ -9,11 +9,21 @@ import styles from '../../styles';
 const ProfileView = () => {
   const navigation = useNavigation();
 
+  const handleLogout = () => {
+    // Add your logout logic here
+    console.log('Logout pressed');
+  };
+
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContent}>
 
       <View style={styles.container_white}>
-          <Text style={styles.name}> Hola, Pedro</Text>
+          {/* <View style={styles.headerContainer}>
+            <Pressable onPress={handleLogout} style={styles.logoutButton}>
+              <Icon name="logout" size={24} color="#FF9900" />
+            </Pressable>
+          </View> */}
+          <Text style={styles.name}> Hola, Panda</Text>
           <Image
               source={{ uri: '../assets/images/logo.png' }} // Replace with actual profile picture URL            
               style={styles.profileImage}
@@ -24,6 +34,7 @@ const ProfileView = () => {
             <View style={styles.progressBarContainer}>
               <View style={styles.progressBarFill} />
             </View>
+            {/* <Text style={styles.privacyStatement}>Nota sobre privacidad y seguridad de la información guardada.</Text> */}
           </View>
 
           <View style={styles.profileStepsContainer}>
@@ -38,23 +49,37 @@ const ProfileView = () => {
               style={styles.pressable}
               // onPress={() => navigation.navigate('ConfirmId')}
             >
-              <Text style={styles.pressableText}>Verificar identidad</Text>
+              <Text style={styles.pressableText}>Documento de identidad</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
+            <Pressable 
+              style={styles.pressable}
+              // onPress={() => navigation.navigate('ConfirmId')}
+            >
+              <Text style={styles.pressableText}>Número de celular</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
+            <Pressable 
+              style={styles.pressable}
+              // onPress={() => navigation.navigate('ConfirmId')}
+            >
+              <Text style={styles.pressableText}>Correo electrónico</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
             {/* <Pressable 
               style={styles.pressable}
-              onPress={() => navigation.navigate('CreateSeed')}
+              // onPress={() => navigation.navigate('CreateSeed')}
             >
               <Text style={styles.pressableText}>Frase de recuperación</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
-            </Pressable> */}
+            </Pressable>
             <Pressable 
               style={styles.pressable}
-              onPress={() => navigation.navigate('SetupGuardians')}  
+              // onPress={() => navigation.navigate('SetupGuardians')}  
             >
               <Text style={styles.pressableText}>Guardianes</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
-            </Pressable>
+            </Pressable> */}
           </View>
       </View>
     </ScrollView>

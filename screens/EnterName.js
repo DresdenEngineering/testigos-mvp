@@ -22,7 +22,7 @@ const EnterName = () => {
         <Text style={styles.text}>¿Cómo te llamas?</Text>
         <TextInput
           style={styles.input}
-          placeholder="Escribe tu nombre"
+          placeholder="Escribe tu nombre o apodo"
           value={name}
           onChangeText={setName}
         />

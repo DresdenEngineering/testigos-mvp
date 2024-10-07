@@ -2,6 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons/faUser'
+import { faWallet } from '@fortawesome/free-solid-svg-icons/faWallet'
+import { faIdCard } from '@fortawesome/free-solid-svg-icons/faIdCard'
+
+
 import styles from './styles';
 
 
@@ -21,6 +28,12 @@ const ProfileScreen = () => (
 );
 
 const RolesScreen = () => (
+  <View style={styles.container}>
+    <RolesView />
+  </View>
+);
+
+const RewardsScreen = () => (
   <View style={styles.container}>
     <RolesView />
   </View>
@@ -47,16 +60,19 @@ const HomeScreen = () => {
           tabBarIcon: ({ color, size }) => {
             let iconName;
             if (route.name === 'Perfil') {
-              iconName = 'person';
+              iconName = faUser;
             } else if (route.name === 'Roles') {
-              iconName = 'group';
+              iconName = faIdCard;
+            } else if (route.name === 'Pagos') {
+              iconName = faWallet;
             } 
-            return <Icon name={iconName} size={size} color={color} />;
+            return <FontAwesomeIcon icon={iconName} />;
           },
         })}
       >
         <Tab.Screen name="Perfil" component={ProfileStack} />
         <Tab.Screen name="Roles" component={RolesScreen} />
+        <Tab.Screen name="Pagos" component={RewardsScreen} />
       </Tab.Navigator>
     </View>
   );
