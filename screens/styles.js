@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginTop: 50,
-    marginBottom: 40,
+    marginBottom: 20,
   },
 
   profileImage: {

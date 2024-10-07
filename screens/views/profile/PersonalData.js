@@ -51,7 +51,7 @@ const PersonalData = ({ navigation }) => {
           
           <View style={styles.buttonContainer}>
             <Pressable style={[styles.fullWidthButton, styles.primaryButton]} onPress={() => navigation.goBack()}>
-                <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Enviar</Text>
+                <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Guardar</Text>
             </Pressable>
           </View>
         </View>

@@ -49,13 +49,6 @@ const ProfileView = () => {
               style={styles.pressable}
               // onPress={() => navigation.navigate('ConfirmId')}
             >
-              <Text style={styles.pressableText}>Documento de identidad</Text>
-              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
-            </Pressable>
-            <Pressable 
-              style={styles.pressable}
-              // onPress={() => navigation.navigate('ConfirmId')}
-            >
               <Text style={styles.pressableText}>Número de celular</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
@@ -64,6 +57,13 @@ const ProfileView = () => {
               // onPress={() => navigation.navigate('ConfirmId')}
             >
               <Text style={styles.pressableText}>Correo electrónico</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
+            <Pressable 
+              style={styles.pressable}
+              // onPress={() => navigation.navigate('ConfirmId')}
+            >
+              <Text style={styles.pressableText}>Documento de identidad</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
             {/* <Pressable 
