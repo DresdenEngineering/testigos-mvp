@@ -28,7 +28,7 @@ Ensure you have the following installed:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/DresdenEngineering/testigos-mvp
-    cd testigo-mvp
+    cd testigos-mvp
     ```
 
 2. **Install the dependencies**:
