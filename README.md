@@ -22,7 +22,6 @@ Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
-- [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
 ### Installation
 
