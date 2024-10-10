@@ -2,7 +2,7 @@
 
 ## Overview
 
-This research project explores the development of a swarm intelligence system designed for election observers (i.e., citizens who scrutinize democratic elections). The proposed system aims to enhance the traceability of the tallying process, thereby contributing to increased transparency in democratic processes.
+This is a swarm intelligence system designed for election observers (i.e., citizens who scrutinize democratic elections). It aims to enhance the traceability of the tallying process, thereby contributing to increased transparency in democratic processes.
 
 The system is built using [Expo](https://expo.dev/), allowing fast development for both iOS and Android platforms.
 
