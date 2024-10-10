@@ -66,6 +66,13 @@ const ProfileView = () => {
               <Text style={styles.pressableText}>Documento de identidad</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
+            <Pressable 
+              style={styles.pressable}
+              // onPress={() => navigation.navigate('ConfirmId')}
+            >
+              <Text style={styles.pressableText}>Afiliación política</Text>
+              <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
+            </Pressable>
             {/* <Pressable 
               style={styles.pressable}
               // onPress={() => navigation.navigate('CreateSeed')}

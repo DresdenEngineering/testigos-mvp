@@ -61,7 +61,7 @@ const HomeScreen = () => {
             let iconName;
             if (route.name === 'Perfil') {
               iconName = faUser;
-            } else if (route.name === 'Roles') {
+            } else if (route.name === 'Tareas') {
               iconName = faIdCard;
             } else if (route.name === 'Pagos') {
               iconName = faWallet;
