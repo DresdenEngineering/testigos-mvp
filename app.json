@@ -18,10 +18,21 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.aepinilla.wallet",
+      "versionCode": 2,
+      "permissions": [
+        "CAMERA"
+      ],
+      "privacyPolicyUrl": "https://testigos.co/privacy-policy.html"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b3f9334e-6c4c-425a-bc98-39fd24398c68"
+      }
     }
   }
 }
