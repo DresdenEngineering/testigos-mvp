@@ -8,7 +8,6 @@ import { faUser } from '@fortawesome/free-solid-svg-icons/faUser'
 import { faWallet } from '@fortawesome/free-solid-svg-icons/faWallet'
 import { faIdCard } from '@fortawesome/free-solid-svg-icons/faIdCard'
 
-
 import styles from './styles';
 
 
@@ -17,6 +16,7 @@ import ProfileStack from './views/ProfileStack';
 
 import ProfileView from './views/profile/ProfileView';
 import RolesView from './views/RolesView';
+import RewardsView from './views/RewardsView';
 
 
 const Tab = createBottomTabNavigator();
@@ -35,7 +35,7 @@ const RolesScreen = () => (
 
 const RewardsScreen = () => (
   <View style={styles.container}>
-    <RolesView />
+    <RewardsView />
   </View>
 );
 
@@ -61,7 +61,7 @@ const HomeScreen = () => {
             let iconName;
             if (route.name === 'Perfil') {
               iconName = faUser;
-            } else if (route.name === 'Tareas') {
+            } else if (route.name === 'Roles') {
               iconName = faIdCard;
             } else if (route.name === 'Pagos') {
               iconName = faWallet;

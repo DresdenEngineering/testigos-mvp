@@ -22,6 +22,18 @@ const roles = [
     description: 'Lalala',
     icon: 'visibility',
   },
+  {
+    id: '4',
+    title: 'Auxiliar',
+    description: 'Lalala',
+    icon: 'visibility',
+  },
+  {
+    id: '6',
+    title: 'Representante',
+    description: 'Lalala',
+    icon: 'visibility',
+  },
   
 ];
 
