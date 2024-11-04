@@ -11,12 +11,12 @@ const ProfileView = () => {
   const navigation = useNavigation();
   const [qrVisible, setQrVisible] = useState(false);
 
-  const handleLogout = () => {
-    console.log('Logout pressed');
-  };
-
   const toggleQrModal = () => {
     setQrVisible(!qrVisible);
+  };
+
+  const goToSettings = () => {
+    navigation.navigate('SettingsScreen');
   };
 
   return (
@@ -24,6 +24,10 @@ const ProfileView = () => {
 
       <View style={styles.container_white}>
           <View style={localStyles.headerContainer}>
+            <Pressable onPress={goToSettings} style={localStyles.profilePicContainer}>
+              <View style={localStyles.profilePic} />
+            </Pressable>
+
             <Text style={styles.name}>Hola, Panda</Text>
             <Pressable 
               style={localStyles.qrButton}
@@ -136,10 +140,21 @@ const localStyles = StyleSheet.create({
     paddingHorizontal: 20,
     marginBottom: 20,
   },
+  profilePicContainer: {
+    marginTop: 30,
+    marginLeft: -10,
+    marginRight: -10,
+  },
+  profilePic: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: 'black',
+  },
   qrButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 30,
   },
   modalContainer: {
     flex: 1,

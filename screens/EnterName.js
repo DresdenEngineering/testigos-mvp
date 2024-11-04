@@ -33,7 +33,6 @@ const EnterName = () => {
             <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Continuar</Text>
         </Pressable>
       </View>
-      {/* <Button theme="primary" label="Continuar" onPress={navigateToHomeScreen}/> */}
     </View>
   );
 };

@@ -17,7 +17,7 @@ import { Provider } from 'react-redux';
 import StartScreen from './screens/StartScreen';
 import EnterName from './screens/EnterName';
 import HomeScreen from './screens/HomeScreen';
-// import SettingsScreen from './screens/SettingsScreen';
+import SettingsScreen from './screens/SettingsScreen';
 // import ProfileScreen from './screens/ProfileScreen';
 
 
@@ -75,6 +75,11 @@ const App = () => {
             name="HomeScreen" 
             component={HomeScreen} 
             options={{ headerShown: false }}
+          />
+          <Stack.Screen 
+            name="SettingsScreen" 
+            component={SettingsScreen} 
+            options={{ title: 'Settings', headerShown: true }}
           />
         </Stack.Navigator>
       </NavigationContainer>
