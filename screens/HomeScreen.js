@@ -59,20 +59,20 @@ const HomeScreen = () => {
           headerShown: false,
           tabBarIcon: ({ color, size }) => {
             let iconName;
-            if (route.name === 'Perfil') {
+            if (route.name === 'Profile') {
               iconName = faUser;
             } else if (route.name === 'Roles') {
               iconName = faIdCard;
-            } else if (route.name === 'Pagos') {
+            } else if (route.name === 'Rewards') {
               iconName = faWallet;
             } 
             return <FontAwesomeIcon icon={iconName} />;
           },
         })}
       >
-        <Tab.Screen name="Perfil" component={ProfileStack} />
+        <Tab.Screen name="Profile" component={ProfileStack} />
         <Tab.Screen name="Roles" component={RolesScreen} />
-        <Tab.Screen name="Pagos" component={RewardsScreen} />
+        <Tab.Screen name="Rewards" component={RewardsScreen} />
       </Tab.Navigator>
     </View>
   );

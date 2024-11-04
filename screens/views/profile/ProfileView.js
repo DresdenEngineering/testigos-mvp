@@ -28,7 +28,7 @@ const ProfileView = () => {
               <View style={localStyles.profilePic} />
             </Pressable>
 
-            <Text style={styles.name}>Hola, Panda</Text>
+            <Text style={styles.name}>Hi, Panda</Text>
             <Pressable 
               style={localStyles.qrButton}
               onPress={toggleQrModal}
@@ -48,7 +48,7 @@ const ProfileView = () => {
           /> */}
 
           <View style={styles.profileStrengthContainer}>
-            <Text style={styles.profileStrength}>Fortaleza de Perfil</Text>
+            <Text style={styles.profileStrength}>Profile Strength</Text>
             <View style={styles.progressBarContainer}>
               <View style={styles.progressBarFill} />
             </View>
@@ -60,38 +60,38 @@ const ProfileView = () => {
               style={styles.pressable}
               onPress={() => navigation.navigate('PersonalData')}
             >
-              <Text style={styles.pressableText}>Datos personales</Text>
+              <Text style={styles.pressableText}>Personal Data</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
             <Pressable 
               style={styles.pressable}
               // onPress={() => navigation.navigate('ConfirmId')}
             >
-              <Text style={styles.pressableText}>Número de celular</Text>
+              <Text style={styles.pressableText}>Phone Number</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
             <Pressable 
               style={styles.pressable}
               // onPress={() => navigation.navigate('ConfirmId')}
             >
-              <Text style={styles.pressableText}>Correo electrónico</Text>
+              <Text style={styles.pressableText}>Email</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
             <Pressable 
               style={styles.pressable}
               // onPress={() => navigation.navigate('ConfirmId')}
             >
-              <Text style={styles.pressableText}>Documento de identidad</Text>
+              <Text style={styles.pressableText}>Government ID card</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
             <Pressable 
               style={styles.pressable}
               // onPress={() => navigation.navigate('ConfirmId')}
             >
-              <Text style={styles.pressableText}>Afiliación política</Text>
+              <Text style={styles.pressableText}>Political Groups</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
             </Pressable>
-            <Pressable 
+            {/* <Pressable 
               style={styles.pressable}
               // onPress={() => navigation.navigate('CreateSeed')}
             >
@@ -104,7 +104,7 @@ const ProfileView = () => {
             >
               <Text style={styles.pressableText}>Guardianes</Text>
               <Icon name="arrow-forward" size={24} color="#FF9900" style={styles.arrowIcon} />
-            </Pressable>
+            </Pressable> */}
           </View>
       </View>
 
@@ -121,7 +121,7 @@ const ProfileView = () => {
               size={200}
             />
             <Pressable style={localStyles.closeButton} onPress={toggleQrModal}>
-              <Text style={localStyles.closeButtonText}>Cerrar</Text>
+              <Text style={localStyles.closeButtonText}>Close</Text>
             </Pressable>
           </View>
         </View>

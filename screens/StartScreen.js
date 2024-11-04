@@ -18,6 +18,20 @@ const StartScreen = ({ navigation }) => {
     navigation.navigate('EnterName');
   };
 
+  const navigateToGoogle = () => {
+    // Add your Google login logic here
+    console.log('Enter with Google pressed');
+  };
+
+  const navigateToWallet = () => {
+    // Add your Wallet login logic here
+    console.log('Enter with Wallet pressed');
+  };
+
+  const navigateToPhoneNumber = () => {
+    navigation.navigate('EnterPhoneNumber');
+  };
+
   return (
     <View style={styles.container_yellow}>
       <View style={styles.logoContainer}>
@@ -25,15 +39,17 @@ const StartScreen = ({ navigation }) => {
       </View>
       <View style={styles.footerContainer}>
         <Pressable style={[styles.fullWidthButton, styles.primaryButton]} onPress={navigateToEnterName}>
-          <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Empezar</Text>
+          <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Cotinue with Wallet</Text>
         </Pressable>
-        <Pressable style={[styles.fullWidthButton, styles.secondaryButton]} onPress={navigateToEnterName}>
-          <Text style={[styles.fullWidthButtonText, styles.secondaryButtonText]}>Iniciar Sesión</Text>
+        <Pressable style={[styles.fullWidthButton, styles.secondaryButton]} onPress={navigateToWallet}>
+          <Text style={[styles.fullWidthButtonText, styles.secondaryButtonText]}>Continue with Google</Text>
         </Pressable>
+        {/* <Pressable style={[styles.fullWidthButton, styles.tertiaryButton]} onPress={navigateToPhoneNumber}>
+          <Text style={[styles.fullWidthButtonText, styles.tertiaryButtonText]}>Continue with Phone Number</Text>
+        </Pressable> */}
       </View>
       <StatusBar style="auto" />
     </View>
-
   );
 };
 

@@ -1,13 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, Switch, ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const SettingsScreen = () => {
   const [isEnabled, setIsEnabled] = React.useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
+  const navigation = useNavigation();
+
   const handleLogout = () => {
-    // Add your logout logic here
-    console.log('Logout pressed');
+    navigation.navigate('StartScreen');
   };
 
   return (

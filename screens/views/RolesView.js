@@ -6,35 +6,28 @@ import styles from '../styles';
 const roles = [
   {
     id: '1',
-    title: 'Ciudadano',
+    title: 'Citizen',
     description: 'Lalala',
     icon: 'admin-panel-settings',
   },
   {
     id: '2',
-    title: 'Candidato',
+    title: 'Candidate',
     description: 'Lalala',
     icon: 'edit',
   },
   {
     id: '3',
-    title: 'Testigo',
+    title: 'Observer',
     description: 'Lalala',
     icon: 'visibility',
   },
   {
     id: '4',
-    title: 'Auxiliar',
+    title: 'Party member',
     description: 'Lalala',
     icon: 'visibility',
-  },
-  {
-    id: '6',
-    title: 'Representante',
-    description: 'Lalala',
-    icon: 'visibility',
-  },
-  
+  },  
 ];
 
 const RoleCard = ({ title, description, icon }) => (
@@ -56,6 +49,7 @@ const RoleCard = ({ title, description, icon }) => (
 const RolesView = () => {
   return (
     <View style={styles.flatlist_container}>
+      <Text style={styles.title}>Roles</Text>
       <FlatList
       data={roles}
       keyExtractor={(item) => item.id}
@@ -63,7 +57,7 @@ const RolesView = () => {
           <RoleCard
           title={item.title}
           description={item.description}
-          icon={item.icon}
+          // icon={item.icon}
           />
       )}
       // contentContainerStyle={styles.container_white}
@@ -71,7 +65,7 @@ const RolesView = () => {
 
       <View style={styles.buttonContainer}>
         <Pressable style={[styles.fullWidthButton, styles.secondaryButton]}>
-            <Text style={[styles.fullWidthButtonText, styles.secondaryButtonText]}>Agregar Rol</Text>
+            <Text style={[styles.fullWidthButtonText, styles.secondaryButtonText]}>Add Role</Text>
         </Pressable>
       </View>
     </View>

@@ -1,7 +1,12 @@
+import { height } from "@fortawesome/free-solid-svg-icons/faUser";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   // General
+  scrollViewContent: {
+    height: "100%",
+  },
+
   container_yellow: {
     flex: 1,
     backgroundColor: "#FCE279",
@@ -160,7 +165,7 @@ const styles = StyleSheet.create({
   },
 
   progressBarFill: {
-    width: "10%", // Fill 10% of the bar
+    width: "20%", // Fill 10% of the bar
     height: "100%",
     backgroundColor: "#76c7c0",
   },
@@ -245,6 +250,8 @@ const styles = StyleSheet.create({
   // Profile Stack
   title: {
     fontSize: 24,
+    marginTop: 20,
+    marginBottom: 20,
     fontWeight: 'bold',
   },
 
@@ -256,6 +263,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 15,
+    marginLeft: 5,
   },
   
   input_profile: {

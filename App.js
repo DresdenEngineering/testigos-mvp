@@ -55,7 +55,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen 
-            name="Start" 
+            name="StartScreen" 
             component={StartScreen} 
             options={{ headerShown: false }}
           />
@@ -63,8 +63,8 @@ const App = () => {
             name="EnterName" 
             component={EnterName} 
             options={{
-              headerShown: true,
-              title: 'Atrás',
+              headerShown: false,
+              // title: 'Atrás',
               headerStyle: {
                 backgroundColor: '#FCE279',
               },

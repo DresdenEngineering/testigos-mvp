@@ -20,22 +20,22 @@ const RewardsView = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Saldo Actual</Text>
-      <Text style={styles.tokens}>{tokensEarned}</Text>
+      <Text style={styles.title}>Rewards</Text>
+      <Text style={styles.tokens}>{tokensEarned} Tokens</Text>
 
       <View style={styles.buttonContainer}>
         <Pressable style={[styles.button, styles.sendButton]}>
-          <Text style={styles.buttonText}>Enviar</Text>
+          <Text style={styles.buttonText}>Send</Text>
         </Pressable>
         <Pressable style={[styles.button, styles.receiveButton]}>
-          <Text style={styles.buttonText}>Recibir</Text>
+          <Text style={styles.buttonText}>Receive</Text>
         </Pressable>
         <Pressable style={[styles.button, styles.withdrawButton]}>
-          <Text style={styles.buttonText}>Retirar</Text>
+          <Text style={styles.buttonText}>Withdraw</Text>
         </Pressable>
       </View>
 
-      <Text style={styles.subtitle}>Transacciones</Text>
+      <Text style={styles.subtitle}>Transactions</Text>
       <FlatList
         data={transactions}
         keyExtractor={(item) => item.id}
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    padding: 10,
+    paddingVertical: 10,
     marginHorizontal: 5,
     borderRadius: 5,
     alignItems: 'center',
@@ -95,13 +95,13 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 15,
   },
   transactionList: {
     flex: 1,
   },
   transactionItem: {
-    padding: 15,
+    padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },

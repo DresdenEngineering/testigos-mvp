@@ -14,37 +14,37 @@ const ProfileStack = () => {
       <Stack.Screen 
         name="ProfileView" 
         component={ProfileView} 
-        options={{ headerShown: false, title: 'Perfil' }}
+        options={{ headerShown: false, title: 'Profile' }}
       />
       <Stack.Screen 
         name="PhoneNumberView" 
         component={ProfileView} 
-        options={{ headerShown: false, title: 'Perfil' }}
+        options={{ headerShown: false, title: 'Profile' }}
       />
       <Stack.Screen 
         name="EmailView" 
         component={ProfileView} 
-        options={{ headerShown: false, title: 'Perfil' }}
+        options={{ headerShown: false, title: 'Profile' }}
       />
       <Stack.Screen 
         name="PersonalData" 
         component={PersonalData} 
-        options={{ headerShown: true, title: 'Datos Personales' }}
+        options={{ headerShown: true, title: 'Personal Data' }}
       />
       <Stack.Screen 
         name="ConfirmId" 
         component={ConfirmId} 
-        options={{ headerShown: true, title: 'Confirmar Identidad' }}
+        options={{ headerShown: true, title: 'Confirm Identity' }}
       />
       <Stack.Screen 
         name="CreateSeed" 
         component={CreateSeed} 
-        options={{ headerShown: true, title: 'Frase de Recuperación' }}
+        options={{ headerShown: true, title: 'Recovery Phrase' }}
       />
       <Stack.Screen 
         name="SetupGuardians" 
         component={SetupGuardians} 
-        options={{ headerShown: true, title: 'Guardianes' }}
+        options={{ headerShown: true, title: 'Guardians' }}
       />
     </Stack.Navigator>
   );

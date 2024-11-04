@@ -19,10 +19,10 @@ const EnterName = () => {
     <View style={styles.container_yellow}>
 
       <View style={styles.screen_container}>
-        <Text style={styles.text}>¿Cómo te llamas?</Text>
+        <Text style={styles.text}>Choose a nick name</Text>
         <TextInput
           style={styles.input}
-          placeholder="Escribe tu nombre o apodo"
+          placeholder="Write a nick name"
           value={name}
           onChangeText={setName}
         />
@@ -30,7 +30,7 @@ const EnterName = () => {
       
       <View style={styles.buttonContainer}>
         <Pressable style={[styles.fullWidthButton, styles.primaryButton]} onPress={navigateToHomeScreen}>
-            <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Continuar</Text>
+            <Text style={[styles.fullWidthButtonText, styles.primaryButtonText]}>Continue</Text>
         </Pressable>
       </View>
     </View>
