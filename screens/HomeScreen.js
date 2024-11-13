@@ -10,11 +10,11 @@ import { faIdCard } from '@fortawesome/free-solid-svg-icons/faIdCard'
 
 import styles from './styles';
 
-
 // Views
 import ProfileStack from './views/ProfileStack';
 
 import ProfileView from './views/profile/ProfileView';
+import NodesView from './views/NodesView';
 import RolesView from './views/RolesView';
 import RewardsView from './views/RewardsView';
 
@@ -24,6 +24,12 @@ const Tab = createBottomTabNavigator();
 const ProfileScreen = () => (
   <View style={styles.container}>
     <ProfileView />
+  </View>
+);
+
+const NodesScreen = () => (
+  <View style={styles.container}>
+    <NodesView />
   </View>
 );
 
@@ -61,6 +67,8 @@ const HomeScreen = () => {
             let iconName;
             if (route.name === 'Profile') {
               iconName = faUser;
+            } else if (route.name === 'Nodes') {
+              iconName = faIdCard;
             } else if (route.name === 'Roles') {
               iconName = faIdCard;
             } else if (route.name === 'Rewards') {
@@ -71,6 +79,7 @@ const HomeScreen = () => {
         })}
       >
         <Tab.Screen name="Profile" component={ProfileStack} />
+        <Tab.Screen name="Nodes" component={NodesScreen} />
         <Tab.Screen name="Roles" component={RolesScreen} />
         <Tab.Screen name="Rewards" component={RewardsScreen} />
       </Tab.Navigator>

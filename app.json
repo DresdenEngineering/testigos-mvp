@@ -22,9 +22,16 @@
       "package": "com.aepinilla.wallet",
       "versionCode": 3,
       "permissions": [
-        "CAMERA"
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
       ],
-      "privacyPolicyUrl": "https://testigos.co/privacy-policy.html"
+      "privacyPolicyUrl": "https://testigos.co/privacy-policy.html",
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
