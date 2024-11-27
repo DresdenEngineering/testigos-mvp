@@ -3,6 +3,7 @@
     "name": "wallet",
     "slug": "wallet",
     "version": "1.0.0",
+    "sdkVersion": "52.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -40,6 +41,9 @@
       "eas": {
         "projectId": "b3f9334e-6c4c-425a-bc98-39fd24398c68"
       }
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
