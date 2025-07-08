@@ -2,7 +2,7 @@
   "expo": {
     "name": "wallet",
     "slug": "wallet",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -26,7 +26,6 @@
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION"
       ],
-      "privacyPolicyUrl": "https://testigos.co/privacy-policy.html",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyBt2qwhILjoj3-f7MR9YoQSI5IWmFrHOQE"
