@@ -20,7 +20,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.aepinilla.wallet",
-      "versionCode": 3,
+      "versionCode": 4,
       "permissions": [
         "CAMERA",
         "ACCESS_FINE_LOCATION",
