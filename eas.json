@@ -7,32 +7,7 @@
       "developmentClient": true,
       "distribution": "internal",
       "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleDebug"
-      },
-      "env": {
-        "GOOGLE_MAPS_API_KEY": "@google_maps_api_key",
-        "WALT_ID_API_KEY": "@walt_id_api_key",
-        "WALT_ID_API_URL": "@walt_id_api_url"
-      }
-    },
-    "preview": {
-      "distribution": "internal",
-      "android": {
-        "buildType": "app-bundle",
-        "gradleCommand": ":app:bundleRelease"
-      },
-      "env": {
-        "GOOGLE_MAPS_API_KEY": "@google_maps_api_key",
-        "WALT_ID_API_KEY": "@walt_id_api_key",
-        "WALT_ID_API_URL": "@walt_id_api_url"
-      }
-    },
-    "production": {
-      "android": {
-        "buildType": "app-bundle",
-        "gradleCommand": ":app:bundleRelease",
-        "image": "latest"
+        "buildType": "apk"
       },
       "env": {
         "GOOGLE_MAPS_API_KEY": "@google_maps_api_key",
@@ -42,11 +17,10 @@
     }
   },
   "submit": {
-    "production": {
+    "development": {
       "android": {
         "track": "internal",
-        "releaseStatus": "draft",
-        "changesNotSentForReview": true
+        "releaseStatus": "draft"
       }
     }
   }

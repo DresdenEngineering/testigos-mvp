@@ -26,20 +26,39 @@ Ensure you have the following installed:
 ### Installation
 
 1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/DresdenEngineering/testigos-mvp
-    cd testigos-mvp
-    ```
+
+   ```bash
+   git clone https://github.com/DresdenEngineering/testigos-mvp
+   cd testigos-mvp
+   ```
 
 2. **Install the dependencies**:
-    ```bash
-    yarn install
-    ```
+
+   ```bash
+   yarn install
+   ```
 
 3. **Start the project**:
-    ```bash
-    npx expo start
-    ```
+
+   ```bash
+   npx expo start
+   ```
+
+4. **Build the project**:
+   ```bash
+   eas build --profile development --platform android
+   ```
+5. **Submit the build to the Google Play Store**:
+
+   ```bash
+   eas submit -p android --profile development
+   ```
+
+# Get the list of builds
+
+eas build:list --platform android
+
+eas submit -p android --id f334a2d7-b05a-46ef-9288-51ea91610bee
 
 ### Running on a Device
 
@@ -62,7 +81,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- Thanks to Tilo Himmelsback for his early support on this project. 
+- Thanks to Tilo Himmelsback for his early support on this project.
 
 ## Contact
 
